@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
+
+    <changeSet id="1" author="abhiramk">
+        <createTable tableName="profiles">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="entity" type="varchar(100)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="type" type="varchar(30)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="state" type="varchar(30)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="fraud_type" type="varchar(30)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="category" type="varchar(20)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="duration" type="int(5)" defaultValueNumeric="0" />
+
+            <column name="fraud_score" type="varchar(20)"/>
+            <column name="source_channel" type="varchar(40)" />
+            <column name="source_user" type="varchar(40)" />
+            <column name="reason" type="varchar(40)"  />
+            <column name="comments" type="varchar(40)" />
+            <column name="start_date" type="DATETIME"/>
+            <column name="migrated" type="tinyint(1)" defaultValueBoolean="false"/>
+            <column name="created_at" type="DATETIME" />
+            <column name="updated_at" type="DATETIME" />
+        </createTable>
+    </changeSet>
+
+    <changeSet id="2" author="abhiramk">
+        <createIndex indexName="unique_index_on_profiles" tableName="profiles" unique="true">
+            <column name="entity"></column>
+            <column name="fraud_type"></column>
+            <column name="category"></column>
+        </createIndex>
+    </changeSet>
+
+    <changeSet id="3" author="abhiramk">
+        <createTable tableName="profile_histories">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="entity" type="varchar(100)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="type" type="varchar(30)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="state" type="varchar(30)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="fraud_type" type="varchar(30)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="category" type="varchar(20)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="duration" type="int(5)" defaultValueNumeric="0" />
+
+            <column name="fraud_score" type="varchar(20)"/>
+            <column name="source_channel" type="varchar(40)" />
+            <column name="source_user" type="varchar(40)" />
+            <column name="reason" type="varchar(40)"  />
+            <column name="comments" type="varchar(40)" />
+            <column name="signal_output" type="varchar(40)" />
+            <column name="manual_review_status" type="varchar(40)" defaultValueBoolean="false"/>
+            <column name="review_by" type="varchar(40)" />
+            <column name="migrated" type="tinyint(1)" defaultValueBoolean="false"/>
+            <column name="start_date" type="DATETIME"/>
+            <column name="created_at" type="DATETIME" />
+            <column name="updated_at" type="DATETIME" />
+        </createTable>
+    </changeSet>
+
+    <changeSet id="4" author="abhiramk">
+        <createTable tableName="email_domain_validation">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+
+            <column name="domain" type="varchar(100)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="status" type="varchar(20)" />
+            <column name="created_at" type="DATETIME" />
+            <column name="updated_at" type="DATETIME" />
+
+        </createTable>
+    </changeSet>
+
+    <changeSet id="5" author="abhiramk">
+        <createIndex indexName="unique_index_on_email_domain_validation" tableName="email_domain_validation" unique="true">
+            <column name="domain"></column>
+        </createIndex>
+    </changeSet>
+
+</databaseChangeLog>

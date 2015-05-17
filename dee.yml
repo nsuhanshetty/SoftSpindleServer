@@ -1,0 +1,48 @@
+server:
+  type: default
+  maxThreads: 8
+  minThreads: 8
+  applicationConnectors:
+    - type: http
+      port: 14041
+  adminConnectors:
+    - type: http
+      port: 14042
+  requestLog:
+    timeZone: IST
+    appenders:
+      - type: file
+        currentLogFilename: ./logs/access.log
+        threshold: INFO
+        archive: true
+        archivedLogFilenamePattern: ./logs/access-%d{yyyy-MM-dd-HH}.log.gz
+        archivedFileCount: 50
+        timeZone: IST
+
+database:
+  driverClass: com.mysql.jdbc.Driver
+  user: root
+  password:
+  url: jdbc:mysql://localhost:3306/dee
+  properties:
+        charSet: UTF-8
+        hibernate.dialect: org.hibernate.dialect.MySQLDialect
+        hibernate.show_sql: false
+        hbm2ddl.auto: update
+  maxWaitForConnection: 1s
+  validationQuery: "/* MyService Health Check */ SELECT 1"
+  minSize: 8
+  maxSize: 32
+
+logging:
+  level: INFO
+  appenders:
+    - type: file
+      currentLogFilename: ./logs/chitragupta.log
+      threshold: DEBUG
+      archive: true
+      archivedLogFilenamePattern: ./logs/chitragupta-%d{yyyy-MM-dd-HH}.log.gz
+      archivedFileCount: 50
+      timeZone: IST
+      logFormat: "%highlight(%-5level) [%date] [%thread] [%cyan(%logger{0})]: %message%n"
+

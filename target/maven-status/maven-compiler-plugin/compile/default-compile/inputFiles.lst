@@ -1,0 +1,16 @@
+/Users/akash.v/workspace/hobby/dee-core/src/main/java/com/dee/db/implementaion/OrderDAO.java
+/Users/akash.v/workspace/hobby/dee-core/src/main/java/com/dee/OMS/models/Order.java
+/Users/akash.v/workspace/hobby/dee-core/src/main/java/com/dee/db/implementaion/OrderItemsDAO.java
+/Users/akash.v/workspace/hobby/dee-core/src/main/java/com/dee/db/implementaion/ImHelper.java
+/Users/akash.v/workspace/hobby/dee-core/src/main/java/com/dee/OMS/models/OrderItemStatus.java
+/Users/akash.v/workspace/hobby/dee-core/src/main/java/com/dee/resources/OrderResource.java
+/Users/akash.v/workspace/hobby/dee-core/src/main/java/com/dee/DeeService.java
+/Users/akash.v/workspace/hobby/dee-core/src/main/java/com/dee/OMS/models/OrderItem.java
+/Users/akash.v/workspace/hobby/dee-core/src/main/java/com/dee/db/HibernateUtils.java
+/Users/akash.v/workspace/hobby/dee-core/src/main/java/com/dee/db/implementaion/CustomerDAO.java
+/Users/akash.v/workspace/hobby/dee-core/src/main/java/com/dee/customer/models/BaseEntity.java
+/Users/akash.v/workspace/hobby/dee-core/src/main/java/com/dee/customer/models/Customer.java
+/Users/akash.v/workspace/hobby/dee-core/src/main/java/com/dee/DeeModule.java
+/Users/akash.v/workspace/hobby/dee-core/src/main/java/com/dee/resources/CustomerResources.java
+/Users/akash.v/workspace/hobby/dee-core/src/main/java/com/dee/db/Inmemory.java
+/Users/akash.v/workspace/hobby/dee-core/src/main/java/com/dee/DeeConfiguration.java

@@ -1,0 +1,735 @@
+[31mWARN [0;39m [2015-05-15 02:01:12,560] [dw-25] [[36mServletHandler[0;39m]: /customer/get/image/1234.pngu
+java.io.FileNotFoundException: ./1234.pngu (No such file or directory)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at com.sun.jersey.core.impl.provider.entity.FileProvider.writeTo(FileProvider.java:101) ~[jersey-core-1.18.1.jar:1.18.1]
+	at com.sun.jersey.core.impl.provider.entity.FileProvider.writeTo(FileProvider.java:64) ~[jersey-core-1.18.1.jar:1.18.1]
+	at com.sun.jersey.spi.container.ContainerResponse.write(ContainerResponse.java:302) ~[jersey-server-1.18.1.jar:1.18.1]
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1510) ~[jersey-server-1.18.1.jar:1.18.1]
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1419) ~[jersey-server-1.18.1.jar:1.18.1]
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1409) ~[jersey-server-1.18.1.jar:1.18.1]
+	at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:409) ~[jersey-servlet-1.18.1.jar:1.18.1]
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:540) ~[jersey-servlet-1.18.1.jar:1.18.1]
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:715) ~[jersey-servlet-1.18.1.jar:1.18.1]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:848) ~[javax.servlet-3.0.0.v201112011016.jar:na]
+	at io.dropwizard.jetty.NonblockingServletHolder.handle(NonblockingServletHolder.java:49) ~[dropwizard-jetty-0.7.0.jar:0.7.0]
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1515) ~[jetty-servlet-9.0.7.v20131107.jar:9.0.7.v20131107]
+	at org.eclipse.jetty.servlets.UserAgentFilter.doFilter(UserAgentFilter.java:83) ~[jetty-servlets-9.0.7.v20131107.jar:9.0.7.v20131107]
+	at org.eclipse.jetty.servlets.GzipFilter.doFilter(GzipFilter.java:348) ~[jetty-servlets-9.0.7.v20131107.jar:9.0.7.v20131107]
+	at io.dropwizard.jetty.BiDiGzipFilter.doFilter(BiDiGzipFilter.java:127) ~[dropwizard-jetty-0.7.0.jar:0.7.0]
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1486) ~[jetty-servlet-9.0.7.v20131107.jar:9.0.7.v20131107]
+	at io.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:29) ~[dropwizard-servlets-0.7.0.jar:0.7.0]
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1486) ~[jetty-servlet-9.0.7.v20131107.jar:9.0.7.v20131107]
+	at com.google.inject.servlet.FilterChainInvocation.doFilter(FilterChainInvocation.java:66) ~[guice-servlet-3.0.jar:na]
+	at com.google.inject.servlet.ManagedFilterPipeline.dispatch(ManagedFilterPipeline.java:118) ~[guice-servlet-3.0.jar:na]
+	at com.google.inject.servlet.GuiceFilter.doFilter(GuiceFilter.java:113) ~[guice-servlet-3.0.jar:na]
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1486) ~[jetty-servlet-9.0.7.v20131107.jar:9.0.7.v20131107]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:519) [jetty-servlet-9.0.7.v20131107.jar:9.0.7.v20131107]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1097) [jetty-server-9.0.7.v20131107.jar:9.0.7.v20131107]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:448) [jetty-servlet-9.0.7.v20131107.jar:9.0.7.v20131107]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1031) [jetty-server-9.0.7.v20131107.jar:9.0.7.v20131107]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:136) [jetty-server-9.0.7.v20131107.jar:9.0.7.v20131107]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97) [jetty-server-9.0.7.v20131107.jar:9.0.7.v20131107]
+	at com.codahale.metrics.jetty9.InstrumentedHandler.handle(InstrumentedHandler.java:173) [metrics-jetty9-3.0.1.jar:3.0.1]
+	at io.dropwizard.jetty.RoutingHandler.handle(RoutingHandler.java:51) [dropwizard-jetty-0.7.0.jar:0.7.0]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97) [jetty-server-9.0.7.v20131107.jar:9.0.7.v20131107]
+	at org.eclipse.jetty.server.handler.RequestLogHandler.handle(RequestLogHandler.java:92) [jetty-server-9.0.7.v20131107.jar:9.0.7.v20131107]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97) [jetty-server-9.0.7.v20131107.jar:9.0.7.v20131107]
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:162) [jetty-server-9.0.7.v20131107.jar:9.0.7.v20131107]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97) [jetty-server-9.0.7.v20131107.jar:9.0.7.v20131107]
+	at org.eclipse.jetty.server.Server.handle(Server.java:446) [jetty-server-9.0.7.v20131107.jar:9.0.7.v20131107]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:271) [jetty-server-9.0.7.v20131107.jar:9.0.7.v20131107]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:246) [jetty-server-9.0.7.v20131107.jar:9.0.7.v20131107]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.run(AbstractConnection.java:358) [jetty-io-9.0.7.v20131107.jar:9.0.7.v20131107]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:601) [jetty-util-9.0.7.v20131107.jar:9.0.7.v20131107]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:532) [jetty-util-9.0.7.v20131107.jar:9.0.7.v20131107]
+	at java.lang.Thread.run(Thread.java:745) [na:1.7.0_71]
+[34mINFO [0;39m [2015-05-15 02:03:19,900] [main] [[36mAutoConfig[0;39m]: Added resource class: class com.dee.resources.CustomerResources
+[34mINFO [0;39m [2015-05-15 02:03:19,911] [main] [[36mAutoConfig[0;39m]: Added resource class: class com.dee.resources.OrderResource
+[34mINFO [0;39m [2015-05-15 02:03:20,403] [main] [[36mVersion[0;39m]: HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+[34mINFO [0;39m [2015-05-15 02:03:20,429] [main] [[36mVersion[0;39m]: HHH000412: Hibernate Core {4.3.1.Final}
+[34mINFO [0;39m [2015-05-15 02:03:20,438] [main] [[36mEnvironment[0;39m]: HHH000206: hibernate.properties not found
+[34mINFO [0;39m [2015-05-15 02:03:20,444] [main] [[36mEnvironment[0;39m]: HHH000021: Bytecode provider name : javassist
+[34mINFO [0;39m [2015-05-15 02:03:20,554] [main] [[36mSessionFactoryFactory[0;39m]: Entity classes: [com.dee.OMS.models.Order, com.dee.OMS.models.OrderItem, com.dee.customer.models.Customer]
+[34mINFO [0;39m [2015-05-15 02:03:22,621] [main] [[36mDialect[0;39m]: HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[34mINFO [0;39m [2015-05-15 02:03:23,218] [main] [[36mTransactionFactoryInitiator[0;39m]: HHH000399: Using default transaction strategy (direct JDBC transactions)
+[34mINFO [0;39m [2015-05-15 02:03:23,236] [main] [[36mASTQueryTranslatorFactory[0;39m]: HHH000397: Using ASTQueryTranslatorFactory
+[34mINFO [0;39m [2015-05-15 02:03:24,475] [main] [[36mServerFactory[0;39m]: Starting DeeService
+                           web-scale hello world dP for the web
+                                                 88
+  .d8888b. dP.  .dP .d8888b. 88d8b.d8b. 88d888b. 88 .d8888b.
+  88ooood8  `8bd8'  88'  `88 88'`88'`88 88'  `88 88 88ooood8
+  88.  ...  .d88b.  88.  .88 88  88  88 88.  .88 88 88.  ...
+  `88888P' dP'  `dP `88888P8 dP  dP  dP 88Y888P' dP `88888P'
+                                        88
+                                        dP
+
+[34mINFO [0;39m [2015-05-15 02:03:24,745] [main] [[36mSetUIDListener[0;39m]: Opened application@31966bd8{HTTP/1.1}{0.0.0.0:14041}
+[34mINFO [0;39m [2015-05-15 02:03:24,746] [main] [[36mSetUIDListener[0;39m]: Opened admin@a824b57{HTTP/1.1}{0.0.0.0:14042}
+[34mINFO [0;39m [2015-05-15 02:03:24,757] [main] [[36mServer[0;39m]: jetty-9.0.7.v20131107
+[34mINFO [0;39m [2015-05-15 02:03:25,199] [main] [[36mWebApplicationImpl[0;39m]: Initiating Jersey application, version 'Jersey: 1.18.1 02/19/2014 03:28 AM'
+[34mINFO [0;39m [2015-05-15 02:03:25,612] [main] [[36mDropwizardResourceConfig[0;39m]: The following paths were found for the configured resources:
+
+    GET     /customer/get (com.dee.resources.CustomerResources)
+    GET     /customer/get/image/{mobile} (com.dee.resources.CustomerResources)
+    POST    /customer/save (com.dee.resources.CustomerResources)
+    POST    /customer/upload/image (com.dee.resources.CustomerResources)
+    POST    /order/create (com.dee.resources.OrderResource)
+    POST    /order/payment/add/{id} (com.dee.resources.OrderResource)
+
+[34mINFO [0;39m [2015-05-15 02:03:26,977] [main] [[36mGuiceComponentProviderFactory[0;39m]: Binding com.dee.resources.CustomerResources to GuiceInstantiatedComponentProvider
+[34mINFO [0;39m [2015-05-15 02:03:27,045] [main] [[36mGuiceComponentProviderFactory[0;39m]: Binding com.dee.resources.OrderResource to GuiceInstantiatedComponentProvider
+[34mINFO [0;39m [2015-05-15 02:03:27,065] [main] [[36mContextHandler[0;39m]: Started i.d.j.MutableServletContextHandler@271d76f8{/,null,AVAILABLE}
+[34mINFO [0;39m [2015-05-15 02:03:27,070] [main] [[36mAdminEnvironment[0;39m]: tasks = 
+
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+[34mINFO [0;39m [2015-05-15 02:03:27,094] [main] [[36mContextHandler[0;39m]: Started i.d.j.MutableServletContextHandler@233eaca2{/,null,AVAILABLE}
+[34mINFO [0;39m [2015-05-15 02:03:27,129] [main] [[36mServerConnector[0;39m]: Started application@31966bd8{HTTP/1.1}{0.0.0.0:14041}
+[34mINFO [0;39m [2015-05-15 02:03:27,133] [main] [[36mServerConnector[0;39m]: Started admin@a824b57{HTTP/1.1}{0.0.0.0:14042}
+[34mINFO [0;39m [2015-05-15 02:08:28,581] [main] [[36mAutoConfig[0;39m]: Added resource class: class com.dee.resources.OrderResource
+[34mINFO [0;39m [2015-05-15 02:08:28,593] [main] [[36mAutoConfig[0;39m]: Added resource class: class com.dee.resources.CustomerResources
+[34mINFO [0;39m [2015-05-15 02:08:29,158] [main] [[36mVersion[0;39m]: HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+[34mINFO [0;39m [2015-05-15 02:08:29,184] [main] [[36mVersion[0;39m]: HHH000412: Hibernate Core {4.3.1.Final}
+[34mINFO [0;39m [2015-05-15 02:08:29,195] [main] [[36mEnvironment[0;39m]: HHH000206: hibernate.properties not found
+[34mINFO [0;39m [2015-05-15 02:08:29,203] [main] [[36mEnvironment[0;39m]: HHH000021: Bytecode provider name : javassist
+[34mINFO [0;39m [2015-05-15 02:08:29,320] [main] [[36mSessionFactoryFactory[0;39m]: Entity classes: [com.dee.OMS.models.Order, com.dee.OMS.models.OrderItem, com.dee.customer.models.Customer]
+[34mINFO [0;39m [2015-05-15 02:08:31,516] [main] [[36mDialect[0;39m]: HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[34mINFO [0;39m [2015-05-15 02:08:32,197] [main] [[36mTransactionFactoryInitiator[0;39m]: HHH000399: Using default transaction strategy (direct JDBC transactions)
+[34mINFO [0;39m [2015-05-15 02:08:32,222] [main] [[36mASTQueryTranslatorFactory[0;39m]: HHH000397: Using ASTQueryTranslatorFactory
+[34mINFO [0;39m [2015-05-15 02:08:33,737] [main] [[36mServerFactory[0;39m]: Starting DeeService
+                           web-scale hello world dP for the web
+                                                 88
+  .d8888b. dP.  .dP .d8888b. 88d8b.d8b. 88d888b. 88 .d8888b.
+  88ooood8  `8bd8'  88'  `88 88'`88'`88 88'  `88 88 88ooood8
+  88.  ...  .d88b.  88.  .88 88  88  88 88.  .88 88 88.  ...
+  `88888P' dP'  `dP `88888P8 dP  dP  dP 88Y888P' dP `88888P'
+                                        88
+                                        dP
+
+[34mINFO [0;39m [2015-05-15 02:08:33,995] [main] [[36mSetUIDListener[0;39m]: Opened application@54e89ff7{HTTP/1.1}{0.0.0.0:14041}
+[34mINFO [0;39m [2015-05-15 02:08:33,997] [main] [[36mSetUIDListener[0;39m]: Opened admin@745e3cad{HTTP/1.1}{0.0.0.0:14042}
+[34mINFO [0;39m [2015-05-15 02:08:34,008] [main] [[36mServer[0;39m]: jetty-9.0.7.v20131107
+[34mINFO [0;39m [2015-05-15 02:08:34,552] [main] [[36mWebApplicationImpl[0;39m]: Initiating Jersey application, version 'Jersey: 1.18.1 02/19/2014 03:28 AM'
+[34mINFO [0;39m [2015-05-15 02:08:35,101] [main] [[36mDropwizardResourceConfig[0;39m]: The following paths were found for the configured resources:
+
+    POST    /order/create (com.dee.resources.OrderResource)
+    POST    /order/payment/add/{id} (com.dee.resources.OrderResource)
+    GET     /customer/get (com.dee.resources.CustomerResources)
+    GET     /customer/get/image/{mobile} (com.dee.resources.CustomerResources)
+    POST    /customer/save (com.dee.resources.CustomerResources)
+    POST    /customer/upload/image (com.dee.resources.CustomerResources)
+
+[34mINFO [0;39m [2015-05-15 02:08:36,930] [main] [[36mGuiceComponentProviderFactory[0;39m]: Binding com.dee.resources.OrderResource to GuiceInstantiatedComponentProvider
+[34mINFO [0;39m [2015-05-15 02:08:37,026] [main] [[36mGuiceComponentProviderFactory[0;39m]: Binding com.dee.resources.CustomerResources to GuiceInstantiatedComponentProvider
+[34mINFO [0;39m [2015-05-15 02:08:37,058] [main] [[36mContextHandler[0;39m]: Started i.d.j.MutableServletContextHandler@56d0df74{/,null,AVAILABLE}
+[34mINFO [0;39m [2015-05-15 02:08:37,094] [main] [[36mAdminEnvironment[0;39m]: tasks = 
+
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+[34mINFO [0;39m [2015-05-15 02:08:37,127] [main] [[36mContextHandler[0;39m]: Started i.d.j.MutableServletContextHandler@55f05bb0{/,null,AVAILABLE}
+[34mINFO [0;39m [2015-05-15 02:08:37,160] [main] [[36mServerConnector[0;39m]: Started application@54e89ff7{HTTP/1.1}{0.0.0.0:14041}
+[34mINFO [0;39m [2015-05-15 02:08:37,163] [main] [[36mServerConnector[0;39m]: Started admin@745e3cad{HTTP/1.1}{0.0.0.0:14042}
+[34mINFO [0;39m [2015-05-15 02:11:16,821] [main] [[36mAutoConfig[0;39m]: Added resource class: class com.dee.resources.OrderResource
+[34mINFO [0;39m [2015-05-15 02:11:16,834] [main] [[36mAutoConfig[0;39m]: Added resource class: class com.dee.resources.CustomerResources
+[34mINFO [0;39m [2015-05-15 02:11:17,291] [main] [[36mVersion[0;39m]: HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+[34mINFO [0;39m [2015-05-15 02:11:17,315] [main] [[36mVersion[0;39m]: HHH000412: Hibernate Core {4.3.1.Final}
+[34mINFO [0;39m [2015-05-15 02:11:17,322] [main] [[36mEnvironment[0;39m]: HHH000206: hibernate.properties not found
+[34mINFO [0;39m [2015-05-15 02:11:17,327] [main] [[36mEnvironment[0;39m]: HHH000021: Bytecode provider name : javassist
+[34mINFO [0;39m [2015-05-15 02:11:17,433] [main] [[36mSessionFactoryFactory[0;39m]: Entity classes: [com.dee.OMS.models.Order, com.dee.OMS.models.OrderItem, com.dee.customer.models.Customer]
+[34mINFO [0;39m [2015-05-15 02:11:19,390] [main] [[36mDialect[0;39m]: HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[34mINFO [0;39m [2015-05-15 02:11:19,961] [main] [[36mTransactionFactoryInitiator[0;39m]: HHH000399: Using default transaction strategy (direct JDBC transactions)
+[34mINFO [0;39m [2015-05-15 02:11:19,987] [main] [[36mASTQueryTranslatorFactory[0;39m]: HHH000397: Using ASTQueryTranslatorFactory
+[34mINFO [0;39m [2015-05-15 02:11:21,171] [main] [[36mServerFactory[0;39m]: Starting DeeService
+                           web-scale hello world dP for the web
+                                                 88
+  .d8888b. dP.  .dP .d8888b. 88d8b.d8b. 88d888b. 88 .d8888b.
+  88ooood8  `8bd8'  88'  `88 88'`88'`88 88'  `88 88 88ooood8
+  88.  ...  .d88b.  88.  .88 88  88  88 88.  .88 88 88.  ...
+  `88888P' dP'  `dP `88888P8 dP  dP  dP 88Y888P' dP `88888P'
+                                        88
+                                        dP
+
+[34mINFO [0;39m [2015-05-15 02:11:21,425] [main] [[36mSetUIDListener[0;39m]: Opened application@628af225{HTTP/1.1}{0.0.0.0:14041}
+[34mINFO [0;39m [2015-05-15 02:11:21,427] [main] [[36mSetUIDListener[0;39m]: Opened admin@101f8dae{HTTP/1.1}{0.0.0.0:14042}
+[34mINFO [0;39m [2015-05-15 02:11:21,438] [main] [[36mServer[0;39m]: jetty-9.0.7.v20131107
+[34mINFO [0;39m [2015-05-15 02:11:21,881] [main] [[36mWebApplicationImpl[0;39m]: Initiating Jersey application, version 'Jersey: 1.18.1 02/19/2014 03:28 AM'
+[34mINFO [0;39m [2015-05-15 02:11:22,382] [main] [[36mDropwizardResourceConfig[0;39m]: The following paths were found for the configured resources:
+
+    POST    /order/create (com.dee.resources.OrderResource)
+    POST    /order/payment/add/{id} (com.dee.resources.OrderResource)
+    GET     /customer/get (com.dee.resources.CustomerResources)
+    GET     /customer/get/image/{mobile} (com.dee.resources.CustomerResources)
+    POST    /customer/save (com.dee.resources.CustomerResources)
+    POST    /customer/upload/image (com.dee.resources.CustomerResources)
+
+[34mINFO [0;39m [2015-05-15 02:11:25,750] [main] [[36mGuiceComponentProviderFactory[0;39m]: Binding com.dee.resources.OrderResource to GuiceInstantiatedComponentProvider
+[34mINFO [0;39m [2015-05-15 02:11:25,830] [main] [[36mGuiceComponentProviderFactory[0;39m]: Binding com.dee.resources.CustomerResources to GuiceInstantiatedComponentProvider
+[34mINFO [0;39m [2015-05-15 02:11:25,859] [main] [[36mContextHandler[0;39m]: Started i.d.j.MutableServletContextHandler@56237022{/,null,AVAILABLE}
+[34mINFO [0;39m [2015-05-15 02:11:25,865] [main] [[36mAdminEnvironment[0;39m]: tasks = 
+
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+[34mINFO [0;39m [2015-05-15 02:11:25,895] [main] [[36mContextHandler[0;39m]: Started i.d.j.MutableServletContextHandler@73892482{/,null,AVAILABLE}
+[34mINFO [0;39m [2015-05-15 02:11:25,925] [main] [[36mServerConnector[0;39m]: Started application@628af225{HTTP/1.1}{0.0.0.0:14041}
+[34mINFO [0;39m [2015-05-15 02:11:25,929] [main] [[36mServerConnector[0;39m]: Started admin@101f8dae{HTTP/1.1}{0.0.0.0:14042}
+[34mINFO [0;39m [2015-05-15 02:18:14,104] [main] [[36mAutoConfig[0;39m]: Added resource class: class com.dee.resources.CustomerResources
+[34mINFO [0;39m [2015-05-15 02:18:14,118] [main] [[36mAutoConfig[0;39m]: Added resource class: class com.dee.resources.OrderResource
+[34mINFO [0;39m [2015-05-15 02:18:14,642] [main] [[36mVersion[0;39m]: HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+[34mINFO [0;39m [2015-05-15 02:18:14,735] [main] [[36mVersion[0;39m]: HHH000412: Hibernate Core {4.3.1.Final}
+[34mINFO [0;39m [2015-05-15 02:18:14,750] [main] [[36mEnvironment[0;39m]: HHH000206: hibernate.properties not found
+[34mINFO [0;39m [2015-05-15 02:18:14,766] [main] [[36mEnvironment[0;39m]: HHH000021: Bytecode provider name : javassist
+[34mINFO [0;39m [2015-05-15 02:18:14,910] [main] [[36mSessionFactoryFactory[0;39m]: Entity classes: [com.dee.OMS.models.Order, com.dee.OMS.models.OrderItem, com.dee.customer.models.Customer]
+[34mINFO [0;39m [2015-05-15 02:18:17,046] [main] [[36mDialect[0;39m]: HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[34mINFO [0;39m [2015-05-15 02:18:17,704] [main] [[36mTransactionFactoryInitiator[0;39m]: HHH000399: Using default transaction strategy (direct JDBC transactions)
+[34mINFO [0;39m [2015-05-15 02:18:17,730] [main] [[36mASTQueryTranslatorFactory[0;39m]: HHH000397: Using ASTQueryTranslatorFactory
+[34mINFO [0;39m [2015-05-15 02:18:19,154] [main] [[36mServerFactory[0;39m]: Starting DeeService
+                           web-scale hello world dP for the web
+                                                 88
+  .d8888b. dP.  .dP .d8888b. 88d8b.d8b. 88d888b. 88 .d8888b.
+  88ooood8  `8bd8'  88'  `88 88'`88'`88 88'  `88 88 88ooood8
+  88.  ...  .d88b.  88.  .88 88  88  88 88.  .88 88 88.  ...
+  `88888P' dP'  `dP `88888P8 dP  dP  dP 88Y888P' dP `88888P'
+                                        88
+                                        dP
+
+[34mINFO [0;39m [2015-05-15 02:18:19,457] [main] [[36mSetUIDListener[0;39m]: Opened application@2560bab1{HTTP/1.1}{0.0.0.0:14041}
+[34mINFO [0;39m [2015-05-15 02:18:19,459] [main] [[36mSetUIDListener[0;39m]: Opened admin@7180cda2{HTTP/1.1}{0.0.0.0:14042}
+[34mINFO [0;39m [2015-05-15 02:18:19,468] [main] [[36mServer[0;39m]: jetty-9.0.7.v20131107
+[34mINFO [0;39m [2015-05-15 02:18:20,232] [main] [[36mWebApplicationImpl[0;39m]: Initiating Jersey application, version 'Jersey: 1.18.1 02/19/2014 03:28 AM'
+[34mINFO [0;39m [2015-05-15 02:18:20,808] [main] [[36mDropwizardResourceConfig[0;39m]: The following paths were found for the configured resources:
+
+    GET     /customer/get (com.dee.resources.CustomerResources)
+    GET     /customer/get/image/{mobile} (com.dee.resources.CustomerResources)
+    POST    /customer/save (com.dee.resources.CustomerResources)
+    POST    /customer/upload/image (com.dee.resources.CustomerResources)
+    POST    /order/create (com.dee.resources.OrderResource)
+    POST    /order/payment/add/{id} (com.dee.resources.OrderResource)
+
+[34mINFO [0;39m [2015-05-15 02:18:23,261] [main] [[36mGuiceComponentProviderFactory[0;39m]: Binding com.dee.resources.CustomerResources to GuiceInstantiatedComponentProvider
+[34mINFO [0;39m [2015-05-15 02:18:23,370] [main] [[36mGuiceComponentProviderFactory[0;39m]: Binding com.dee.resources.OrderResource to GuiceInstantiatedComponentProvider
+[34mINFO [0;39m [2015-05-15 02:18:23,395] [main] [[36mContextHandler[0;39m]: Started i.d.j.MutableServletContextHandler@56237022{/,null,AVAILABLE}
+[34mINFO [0;39m [2015-05-15 02:18:23,402] [main] [[36mAdminEnvironment[0;39m]: tasks = 
+
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+[34mINFO [0;39m [2015-05-15 02:18:23,426] [main] [[36mContextHandler[0;39m]: Started i.d.j.MutableServletContextHandler@73892482{/,null,AVAILABLE}
+[34mINFO [0;39m [2015-05-15 02:18:23,454] [main] [[36mServerConnector[0;39m]: Started application@2560bab1{HTTP/1.1}{0.0.0.0:14041}
+[34mINFO [0;39m [2015-05-15 02:18:23,462] [main] [[36mServerConnector[0;39m]: Started admin@7180cda2{HTTP/1.1}{0.0.0.0:14042}
+[34mINFO [0;39m [2015-05-15 02:32:15,573] [dw-24 - GET /customer/get?name=&mobile=&phone=] [[36mStatisticalLoggingSessionEventListener[0;39m]: Session Metrics {
+    83000 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    15634000 nanoseconds spent preparing 1 JDBC statements;
+    48650000 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    11583000 nanoseconds spent executing 1 flushes (flushing a total of 13 entities and 0 collections);
+    63000 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+[34mINFO [0;39m [2015-05-15 02:34:29,225] [main] [[36mAutoConfig[0;39m]: Added resource class: class com.dee.resources.OrderResource
+[34mINFO [0;39m [2015-05-15 02:34:29,229] [main] [[36mAutoConfig[0;39m]: Added resource class: class com.dee.resources.CustomerResources
+[34mINFO [0;39m [2015-05-15 02:34:29,414] [main] [[36mVersion[0;39m]: HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+[34mINFO [0;39m [2015-05-15 02:34:29,424] [main] [[36mVersion[0;39m]: HHH000412: Hibernate Core {4.3.1.Final}
+[34mINFO [0;39m [2015-05-15 02:34:29,428] [main] [[36mEnvironment[0;39m]: HHH000206: hibernate.properties not found
+[34mINFO [0;39m [2015-05-15 02:34:29,430] [main] [[36mEnvironment[0;39m]: HHH000021: Bytecode provider name : javassist
+[34mINFO [0;39m [2015-05-15 02:34:29,471] [main] [[36mSessionFactoryFactory[0;39m]: Entity classes: [com.dee.OMS.models.Order, com.dee.OMS.models.OrderItem, com.dee.customer.models.Customer]
+[34mINFO [0;39m [2015-05-15 02:34:30,083] [main] [[36mDialect[0;39m]: HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[34mINFO [0;39m [2015-05-15 02:34:30,286] [main] [[36mTransactionFactoryInitiator[0;39m]: HHH000399: Using default transaction strategy (direct JDBC transactions)
+[34mINFO [0;39m [2015-05-15 02:34:30,292] [main] [[36mASTQueryTranslatorFactory[0;39m]: HHH000397: Using ASTQueryTranslatorFactory
+[34mINFO [0;39m [2015-05-15 02:34:30,697] [main] [[36mServerFactory[0;39m]: Starting DeeService
+                           web-scale hello world dP for the web
+                                                 88
+  .d8888b. dP.  .dP .d8888b. 88d8b.d8b. 88d888b. 88 .d8888b.
+  88ooood8  `8bd8'  88'  `88 88'`88'`88 88'  `88 88 88ooood8
+  88.  ...  .d88b.  88.  .88 88  88  88 88.  .88 88 88.  ...
+  `88888P' dP'  `dP `88888P8 dP  dP  dP 88Y888P' dP `88888P'
+                                        88
+                                        dP
+
+[34mINFO [0;39m [2015-05-15 02:34:30,783] [main] [[36mSetUIDListener[0;39m]: Opened application@55d682fe{HTTP/1.1}{0.0.0.0:14041}
+[34mINFO [0;39m [2015-05-15 02:34:30,783] [main] [[36mSetUIDListener[0;39m]: Opened admin@76321db8{HTTP/1.1}{0.0.0.0:14042}
+[34mINFO [0;39m [2015-05-15 02:34:30,787] [main] [[36mServer[0;39m]: jetty-9.0.7.v20131107
+[34mINFO [0;39m [2015-05-15 02:34:30,936] [main] [[36mWebApplicationImpl[0;39m]: Initiating Jersey application, version 'Jersey: 1.18.1 02/19/2014 03:28 AM'
+[34mINFO [0;39m [2015-05-15 02:34:31,071] [main] [[36mDropwizardResourceConfig[0;39m]: The following paths were found for the configured resources:
+
+    POST    /order/create (com.dee.resources.OrderResource)
+    POST    /order/payment/add/{id} (com.dee.resources.OrderResource)
+    GET     /customer/get (com.dee.resources.CustomerResources)
+    GET     /customer/get/image/ (com.dee.resources.CustomerResources)
+    GET     /customer/get/image/{mobile} (com.dee.resources.CustomerResources)
+    POST    /customer/save (com.dee.resources.CustomerResources)
+    POST    /customer/upload/image (com.dee.resources.CustomerResources)
+
+[34mINFO [0;39m [2015-05-15 02:34:31,480] [main] [[36mGuiceComponentProviderFactory[0;39m]: Binding com.dee.resources.OrderResource to GuiceInstantiatedComponentProvider
+[34mINFO [0;39m [2015-05-15 02:34:31,506] [main] [[36mGuiceComponentProviderFactory[0;39m]: Binding com.dee.resources.CustomerResources to GuiceInstantiatedComponentProvider
+[34mINFO [0;39m [2015-05-15 02:34:31,512] [main] [[36mContextHandler[0;39m]: Started i.d.j.MutableServletContextHandler@5d282c43{/,null,AVAILABLE}
+[34mINFO [0;39m [2015-05-15 02:34:31,513] [main] [[36mAdminEnvironment[0;39m]: tasks = 
+
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+[34mINFO [0;39m [2015-05-15 02:34:31,520] [main] [[36mContextHandler[0;39m]: Started i.d.j.MutableServletContextHandler@1b45e2b5{/,null,AVAILABLE}
+[34mINFO [0;39m [2015-05-15 02:34:31,527] [main] [[36mServerConnector[0;39m]: Started application@55d682fe{HTTP/1.1}{0.0.0.0:14041}
+[34mINFO [0;39m [2015-05-15 02:34:31,527] [main] [[36mServerConnector[0;39m]: Started admin@76321db8{HTTP/1.1}{0.0.0.0:14042}
+[34mINFO [0;39m [2015-05-15 02:54:15,056] [dw-24 - POST /customer/save] [[36mStatisticalLoggingSessionEventListener[0;39m]: Session Metrics {
+    57000 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+[34mINFO [0;39m [2015-05-15 02:56:43,271] [dw-24 - POST /customer/save] [[36mStatisticalLoggingSessionEventListener[0;39m]: Session Metrics {
+    56000 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+[34mINFO [0;39m [2015-05-17 12:18:10,328] [main] [[36mAutoConfig[0;39m]: Added resource class: class com.dee.resources.CustomerResources
+[34mINFO [0;39m [2015-05-17 12:18:10,336] [main] [[36mAutoConfig[0;39m]: Added resource class: class com.dee.resources.OrderResource
+[34mINFO [0;39m [2015-05-17 12:18:10,597] [main] [[36mVersion[0;39m]: HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+[34mINFO [0;39m [2015-05-17 12:18:10,608] [main] [[36mVersion[0;39m]: HHH000412: Hibernate Core {4.3.1.Final}
+[34mINFO [0;39m [2015-05-17 12:18:10,612] [main] [[36mEnvironment[0;39m]: HHH000206: hibernate.properties not found
+[34mINFO [0;39m [2015-05-17 12:18:10,614] [main] [[36mEnvironment[0;39m]: HHH000021: Bytecode provider name : javassist
+[34mINFO [0;39m [2015-05-17 12:18:10,655] [main] [[36mSessionFactoryFactory[0;39m]: Entity classes: [com.dee.OMS.models.Order, com.dee.OMS.models.OrderItem, com.dee.customer.models.Customer]
+[34mINFO [0;39m [2015-05-17 12:18:11,464] [main] [[36mDialect[0;39m]: HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[34mINFO [0;39m [2015-05-17 12:18:11,696] [main] [[36mTransactionFactoryInitiator[0;39m]: HHH000399: Using default transaction strategy (direct JDBC transactions)
+[34mINFO [0;39m [2015-05-17 12:18:11,703] [main] [[36mASTQueryTranslatorFactory[0;39m]: HHH000397: Using ASTQueryTranslatorFactory
+[34mINFO [0;39m [2015-05-17 12:18:12,202] [main] [[36mServerFactory[0;39m]: Starting DeeService
+                           web-scale hello world dP for the web
+                                                 88
+  .d8888b. dP.  .dP .d8888b. 88d8b.d8b. 88d888b. 88 .d8888b.
+  88ooood8  `8bd8'  88'  `88 88'`88'`88 88'  `88 88 88ooood8
+  88.  ...  .d88b.  88.  .88 88  88  88 88.  .88 88 88.  ...
+  `88888P' dP'  `dP `88888P8 dP  dP  dP 88Y888P' dP `88888P'
+                                        88
+                                        dP
+
+[34mINFO [0;39m [2015-05-17 12:18:12,296] [main] [[36mSetUIDListener[0;39m]: Opened application@b2e359a{HTTP/1.1}{0.0.0.0:14041}
+[34mINFO [0;39m [2015-05-17 12:18:12,296] [main] [[36mSetUIDListener[0;39m]: Opened admin@6c11732{HTTP/1.1}{0.0.0.0:14042}
+[34mINFO [0;39m [2015-05-17 12:18:12,300] [main] [[36mServer[0;39m]: jetty-9.0.7.v20131107
+[34mINFO [0;39m [2015-05-17 12:18:12,458] [main] [[36mWebApplicationImpl[0;39m]: Initiating Jersey application, version 'Jersey: 1.18.1 02/19/2014 03:28 AM'
+[34mINFO [0;39m [2015-05-17 12:18:12,625] [main] [[36mDropwizardResourceConfig[0;39m]: The following paths were found for the configured resources:
+
+    GET     /customer/get (com.dee.resources.CustomerResources)
+    GET     /customer/get/image/{mobile} (com.dee.resources.CustomerResources)
+    POST    /customer/save (com.dee.resources.CustomerResources)
+    POST    /customer/upload/image (com.dee.resources.CustomerResources)
+    POST    /order/create (com.dee.resources.OrderResource)
+    POST    /order/payment/add/{id} (com.dee.resources.OrderResource)
+
+[34mINFO [0;39m [2015-05-17 12:18:13,286] [main] [[36mGuiceComponentProviderFactory[0;39m]: Binding com.dee.resources.CustomerResources to GuiceInstantiatedComponentProvider
+[34mINFO [0;39m [2015-05-17 12:18:13,318] [main] [[36mGuiceComponentProviderFactory[0;39m]: Binding com.dee.resources.OrderResource to GuiceInstantiatedComponentProvider
+[34mINFO [0;39m [2015-05-17 12:18:13,326] [main] [[36mContextHandler[0;39m]: Started i.d.j.MutableServletContextHandler@56540233{/,null,AVAILABLE}
+[34mINFO [0;39m [2015-05-17 12:18:13,328] [main] [[36mAdminEnvironment[0;39m]: tasks = 
+
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+[34mINFO [0;39m [2015-05-17 12:18:13,338] [main] [[36mContextHandler[0;39m]: Started i.d.j.MutableServletContextHandler@211f7810{/,null,AVAILABLE}
+[34mINFO [0;39m [2015-05-17 12:18:13,350] [main] [[36mServerConnector[0;39m]: Started application@b2e359a{HTTP/1.1}{0.0.0.0:14041}
+[34mINFO [0;39m [2015-05-17 12:18:13,352] [main] [[36mServerConnector[0;39m]: Started admin@6c11732{HTTP/1.1}{0.0.0.0:14042}
+[34mINFO [0;39m [2015-05-17 12:18:17,348] [dw-24 - POST /order/create] [[36mStatisticalLoggingSessionEventListener[0;39m]: Session Metrics {
+    58000 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    19706000 nanoseconds spent preparing 4 JDBC statements;
+    22231000 nanoseconds spent executing 4 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    14468000 nanoseconds spent executing 1 flushes (flushing a total of 4 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+[34mINFO [0;39m [2015-05-17 12:22:58,474] [main] [[36mAutoConfig[0;39m]: Added resource class: class com.dee.resources.OrderResource
+[34mINFO [0;39m [2015-05-17 12:22:58,478] [main] [[36mAutoConfig[0;39m]: Added resource class: class com.dee.resources.CustomerResources
+[34mINFO [0;39m [2015-05-17 12:22:58,624] [main] [[36mVersion[0;39m]: HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+[34mINFO [0;39m [2015-05-17 12:22:58,630] [main] [[36mVersion[0;39m]: HHH000412: Hibernate Core {4.3.1.Final}
+[34mINFO [0;39m [2015-05-17 12:22:58,633] [main] [[36mEnvironment[0;39m]: HHH000206: hibernate.properties not found
+[34mINFO [0;39m [2015-05-17 12:22:58,634] [main] [[36mEnvironment[0;39m]: HHH000021: Bytecode provider name : javassist
+[34mINFO [0;39m [2015-05-17 12:22:58,670] [main] [[36mSessionFactoryFactory[0;39m]: Entity classes: [com.dee.OMS.models.Order, com.dee.OMS.models.OrderItem, com.dee.customer.models.Customer]
+[34mINFO [0;39m [2015-05-17 12:22:59,237] [main] [[36mDialect[0;39m]: HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[34mINFO [0;39m [2015-05-17 12:22:59,411] [main] [[36mTransactionFactoryInitiator[0;39m]: HHH000399: Using default transaction strategy (direct JDBC transactions)
+[34mINFO [0;39m [2015-05-17 12:22:59,416] [main] [[36mASTQueryTranslatorFactory[0;39m]: HHH000397: Using ASTQueryTranslatorFactory
+[34mINFO [0;39m [2015-05-17 12:22:59,803] [main] [[36mServerFactory[0;39m]: Starting DeeService
+                           web-scale hello world dP for the web
+                                                 88
+  .d8888b. dP.  .dP .d8888b. 88d8b.d8b. 88d888b. 88 .d8888b.
+  88ooood8  `8bd8'  88'  `88 88'`88'`88 88'  `88 88 88ooood8
+  88.  ...  .d88b.  88.  .88 88  88  88 88.  .88 88 88.  ...
+  `88888P' dP'  `dP `88888P8 dP  dP  dP 88Y888P' dP `88888P'
+                                        88
+                                        dP
+
+[34mINFO [0;39m [2015-05-17 12:22:59,889] [main] [[36mSetUIDListener[0;39m]: Opened application@13ee81b1{HTTP/1.1}{0.0.0.0:14041}
+[34mINFO [0;39m [2015-05-17 12:22:59,890] [main] [[36mSetUIDListener[0;39m]: Opened admin@f8495b0{HTTP/1.1}{0.0.0.0:14042}
+[34mINFO [0;39m [2015-05-17 12:22:59,893] [main] [[36mServer[0;39m]: jetty-9.0.7.v20131107
+[34mINFO [0;39m [2015-05-17 12:23:00,024] [main] [[36mWebApplicationImpl[0;39m]: Initiating Jersey application, version 'Jersey: 1.18.1 02/19/2014 03:28 AM'
+[34mINFO [0;39m [2015-05-17 12:23:00,163] [main] [[36mDropwizardResourceConfig[0;39m]: The following paths were found for the configured resources:
+
+    POST    /order/create (com.dee.resources.OrderResource)
+    POST    /order/payment/add/{id} (com.dee.resources.OrderResource)
+    GET     /customer/get (com.dee.resources.CustomerResources)
+    GET     /customer/get/image/{mobile} (com.dee.resources.CustomerResources)
+    POST    /customer/save (com.dee.resources.CustomerResources)
+    POST    /customer/upload/image (com.dee.resources.CustomerResources)
+
+[34mINFO [0;39m [2015-05-17 12:23:00,573] [main] [[36mGuiceComponentProviderFactory[0;39m]: Binding com.dee.resources.OrderResource to GuiceInstantiatedComponentProvider
+[34mINFO [0;39m [2015-05-17 12:23:00,601] [main] [[36mGuiceComponentProviderFactory[0;39m]: Binding com.dee.resources.CustomerResources to GuiceInstantiatedComponentProvider
+[34mINFO [0;39m [2015-05-17 12:23:00,614] [main] [[36mContextHandler[0;39m]: Started i.d.j.MutableServletContextHandler@2b02a3ad{/,null,AVAILABLE}
+[34mINFO [0;39m [2015-05-17 12:23:00,615] [main] [[36mAdminEnvironment[0;39m]: tasks = 
+
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+[34mINFO [0;39m [2015-05-17 12:23:00,622] [main] [[36mContextHandler[0;39m]: Started i.d.j.MutableServletContextHandler@4cbb99c5{/,null,AVAILABLE}
+[34mINFO [0;39m [2015-05-17 12:23:00,629] [main] [[36mServerConnector[0;39m]: Started application@13ee81b1{HTTP/1.1}{0.0.0.0:14041}
+[34mINFO [0;39m [2015-05-17 12:23:00,630] [main] [[36mServerConnector[0;39m]: Started admin@f8495b0{HTTP/1.1}{0.0.0.0:14042}
+[34mINFO [0;39m [2015-05-17 12:29:24,522] [dw-24 - POST /order/create] [[36mStatisticalLoggingSessionEventListener[0;39m]: Session Metrics {
+    158000 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    19295000 nanoseconds spent preparing 4 JDBC statements;
+    4777000 nanoseconds spent executing 4 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    6927000 nanoseconds spent executing 1 flushes (flushing a total of 4 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+[34mINFO [0;39m [2015-05-17 12:57:41,847] [main] [[36mAutoConfig[0;39m]: Added resource class: class com.dee.resources.OrderResource
+[34mINFO [0;39m [2015-05-17 12:57:41,851] [main] [[36mAutoConfig[0;39m]: Added resource class: class com.dee.resources.CustomerResources
+[34mINFO [0;39m [2015-05-17 12:57:42,058] [main] [[36mVersion[0;39m]: HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+[34mINFO [0;39m [2015-05-17 12:57:42,075] [main] [[36mVersion[0;39m]: HHH000412: Hibernate Core {4.3.1.Final}
+[34mINFO [0;39m [2015-05-17 12:57:42,079] [main] [[36mEnvironment[0;39m]: HHH000206: hibernate.properties not found
+[34mINFO [0;39m [2015-05-17 12:57:42,080] [main] [[36mEnvironment[0;39m]: HHH000021: Bytecode provider name : javassist
+[34mINFO [0;39m [2015-05-17 12:57:42,121] [main] [[36mSessionFactoryFactory[0;39m]: Entity classes: [com.dee.OMS.models.Order, com.dee.OMS.models.OrderItem, com.dee.customer.models.Customer]
+[34mINFO [0;39m [2015-05-17 12:57:42,817] [main] [[36mDialect[0;39m]: HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[34mINFO [0;39m [2015-05-17 12:57:43,033] [main] [[36mTransactionFactoryInitiator[0;39m]: HHH000399: Using default transaction strategy (direct JDBC transactions)
+[34mINFO [0;39m [2015-05-17 12:57:43,050] [main] [[36mASTQueryTranslatorFactory[0;39m]: HHH000397: Using ASTQueryTranslatorFactory
+[34mINFO [0;39m [2015-05-17 12:57:43,491] [main] [[36mServerFactory[0;39m]: Starting DeeService
+                           web-scale hello world dP for the web
+                                                 88
+  .d8888b. dP.  .dP .d8888b. 88d8b.d8b. 88d888b. 88 .d8888b.
+  88ooood8  `8bd8'  88'  `88 88'`88'`88 88'  `88 88 88ooood8
+  88.  ...  .d88b.  88.  .88 88  88  88 88.  .88 88 88.  ...
+  `88888P' dP'  `dP `88888P8 dP  dP  dP 88Y888P' dP `88888P'
+                                        88
+                                        dP
+
+[34mINFO [0;39m [2015-05-17 12:57:43,587] [main] [[36mSetUIDListener[0;39m]: Opened application@75d8c4a5{HTTP/1.1}{0.0.0.0:14041}
+[34mINFO [0;39m [2015-05-17 12:57:43,587] [main] [[36mSetUIDListener[0;39m]: Opened admin@6a566914{HTTP/1.1}{0.0.0.0:14042}
+[34mINFO [0;39m [2015-05-17 12:57:43,591] [main] [[36mServer[0;39m]: jetty-9.0.7.v20131107
+[34mINFO [0;39m [2015-05-17 12:57:43,734] [main] [[36mWebApplicationImpl[0;39m]: Initiating Jersey application, version 'Jersey: 1.18.1 02/19/2014 03:28 AM'
+[34mINFO [0;39m [2015-05-17 12:57:43,857] [main] [[36mDropwizardResourceConfig[0;39m]: The following paths were found for the configured resources:
+
+    POST    /order/create (com.dee.resources.OrderResource)
+    POST    /order/payment/add/{id} (com.dee.resources.OrderResource)
+    GET     /customer/get (com.dee.resources.CustomerResources)
+    GET     /customer/get/image/{mobile} (com.dee.resources.CustomerResources)
+    POST    /customer/save (com.dee.resources.CustomerResources)
+    POST    /customer/upload/image (com.dee.resources.CustomerResources)
+
+[34mINFO [0;39m [2015-05-17 12:57:44,298] [main] [[36mGuiceComponentProviderFactory[0;39m]: Binding com.dee.resources.OrderResource to GuiceInstantiatedComponentProvider
+[34mINFO [0;39m [2015-05-17 12:57:44,326] [main] [[36mGuiceComponentProviderFactory[0;39m]: Binding com.dee.resources.CustomerResources to GuiceInstantiatedComponentProvider
+[34mINFO [0;39m [2015-05-17 12:57:44,333] [main] [[36mContextHandler[0;39m]: Started i.d.j.MutableServletContextHandler@10180331{/,null,AVAILABLE}
+[34mINFO [0;39m [2015-05-17 12:57:44,335] [main] [[36mAdminEnvironment[0;39m]: tasks = 
+
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+[34mINFO [0;39m [2015-05-17 12:57:44,342] [main] [[36mContextHandler[0;39m]: Started i.d.j.MutableServletContextHandler@713b7140{/,null,AVAILABLE}
+[34mINFO [0;39m [2015-05-17 12:57:44,351] [main] [[36mServerConnector[0;39m]: Started application@75d8c4a5{HTTP/1.1}{0.0.0.0:14041}
+[34mINFO [0;39m [2015-05-17 12:57:44,353] [main] [[36mServerConnector[0;39m]: Started admin@6a566914{HTTP/1.1}{0.0.0.0:14042}
+[34mINFO [0;39m [2015-05-17 13:10:02,679] [main] [[36mAutoConfig[0;39m]: Added resource class: class com.dee.resources.CustomerResources
+[34mINFO [0;39m [2015-05-17 13:10:02,682] [main] [[36mAutoConfig[0;39m]: Added resource class: class com.dee.resources.OrderResource
+[34mINFO [0;39m [2015-05-17 13:10:02,814] [main] [[36mVersion[0;39m]: HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+[34mINFO [0;39m [2015-05-17 13:10:02,820] [main] [[36mVersion[0;39m]: HHH000412: Hibernate Core {4.3.1.Final}
+[34mINFO [0;39m [2015-05-17 13:10:02,822] [main] [[36mEnvironment[0;39m]: HHH000206: hibernate.properties not found
+[34mINFO [0;39m [2015-05-17 13:10:02,824] [main] [[36mEnvironment[0;39m]: HHH000021: Bytecode provider name : javassist
+[34mINFO [0;39m [2015-05-17 13:10:02,846] [main] [[36mSessionFactoryFactory[0;39m]: Entity classes: [com.dee.OMS.models.Order, com.dee.OMS.models.OrderItem, com.dee.customer.models.Customer, com.dee.customer.models.Staff]
+[34mINFO [0;39m [2015-05-17 13:10:03,358] [main] [[36mDialect[0;39m]: HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[34mINFO [0;39m [2015-05-17 13:10:03,527] [main] [[36mTransactionFactoryInitiator[0;39m]: HHH000399: Using default transaction strategy (direct JDBC transactions)
+[34mINFO [0;39m [2015-05-17 13:10:03,533] [main] [[36mASTQueryTranslatorFactory[0;39m]: HHH000397: Using ASTQueryTranslatorFactory
+[34mINFO [0;39m [2015-05-17 13:10:03,882] [main] [[36mServerFactory[0;39m]: Starting DeeService
+                           web-scale hello world dP for the web
+                                                 88
+  .d8888b. dP.  .dP .d8888b. 88d8b.d8b. 88d888b. 88 .d8888b.
+  88ooood8  `8bd8'  88'  `88 88'`88'`88 88'  `88 88 88ooood8
+  88.  ...  .d88b.  88.  .88 88  88  88 88.  .88 88 88.  ...
+  `88888P' dP'  `dP `88888P8 dP  dP  dP 88Y888P' dP `88888P'
+                                        88
+                                        dP
+
+[34mINFO [0;39m [2015-05-17 13:10:03,949] [main] [[36mSetUIDListener[0;39m]: Opened application@1e2a59ab{HTTP/1.1}{0.0.0.0:14041}
+[34mINFO [0;39m [2015-05-17 13:10:03,949] [main] [[36mSetUIDListener[0;39m]: Opened admin@6e64f905{HTTP/1.1}{0.0.0.0:14042}
+[34mINFO [0;39m [2015-05-17 13:10:03,952] [main] [[36mServer[0;39m]: jetty-9.0.7.v20131107
+[34mINFO [0;39m [2015-05-17 13:10:04,078] [main] [[36mWebApplicationImpl[0;39m]: Initiating Jersey application, version 'Jersey: 1.18.1 02/19/2014 03:28 AM'
+[34mINFO [0;39m [2015-05-17 13:10:04,190] [main] [[36mDropwizardResourceConfig[0;39m]: The following paths were found for the configured resources:
+
+    GET     /customer/get (com.dee.resources.CustomerResources)
+    GET     /customer/get/image/{mobile} (com.dee.resources.CustomerResources)
+    POST    /customer/save (com.dee.resources.CustomerResources)
+    POST    /customer/upload/image (com.dee.resources.CustomerResources)
+    POST    /order/create (com.dee.resources.OrderResource)
+    POST    /order/payment/add/{id} (com.dee.resources.OrderResource)
+
+[34mINFO [0;39m [2015-05-17 13:10:04,594] [main] [[36mGuiceComponentProviderFactory[0;39m]: Binding com.dee.resources.CustomerResources to GuiceInstantiatedComponentProvider
+[34mINFO [0;39m [2015-05-17 13:10:04,617] [main] [[36mGuiceComponentProviderFactory[0;39m]: Binding com.dee.resources.OrderResource to GuiceInstantiatedComponentProvider
+[34mINFO [0;39m [2015-05-17 13:10:04,623] [main] [[36mContextHandler[0;39m]: Started i.d.j.MutableServletContextHandler@3738a3e4{/,null,AVAILABLE}
+[34mINFO [0;39m [2015-05-17 13:10:04,624] [main] [[36mAdminEnvironment[0;39m]: tasks = 
+
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+[34mINFO [0;39m [2015-05-17 13:10:04,631] [main] [[36mContextHandler[0;39m]: Started i.d.j.MutableServletContextHandler@43c6742b{/,null,AVAILABLE}
+[34mINFO [0;39m [2015-05-17 13:10:04,638] [main] [[36mServerConnector[0;39m]: Started application@1e2a59ab{HTTP/1.1}{0.0.0.0:14041}
+[34mINFO [0;39m [2015-05-17 13:10:04,639] [main] [[36mServerConnector[0;39m]: Started admin@6e64f905{HTTP/1.1}{0.0.0.0:14042}
+[34mINFO [0;39m [2015-05-17 13:12:51,970] [main] [[36mAutoConfig[0;39m]: Added resource class: class com.dee.resources.StaffResource
+[34mINFO [0;39m [2015-05-17 13:12:51,973] [main] [[36mAutoConfig[0;39m]: Added resource class: class com.dee.resources.CustomerResources
+[34mINFO [0;39m [2015-05-17 13:12:51,974] [main] [[36mAutoConfig[0;39m]: Added resource class: class com.dee.resources.OrderResource
+[34mINFO [0;39m [2015-05-17 13:12:52,120] [main] [[36mVersion[0;39m]: HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+[34mINFO [0;39m [2015-05-17 13:12:52,128] [main] [[36mVersion[0;39m]: HHH000412: Hibernate Core {4.3.1.Final}
+[34mINFO [0;39m [2015-05-17 13:12:52,130] [main] [[36mEnvironment[0;39m]: HHH000206: hibernate.properties not found
+[34mINFO [0;39m [2015-05-17 13:12:52,131] [main] [[36mEnvironment[0;39m]: HHH000021: Bytecode provider name : javassist
+[34mINFO [0;39m [2015-05-17 13:12:52,156] [main] [[36mSessionFactoryFactory[0;39m]: Entity classes: [com.dee.OMS.models.Order, com.dee.OMS.models.OrderItem, com.dee.customer.models.Customer, com.dee.customer.models.Staff]
+[34mINFO [0;39m [2015-05-17 13:12:52,687] [main] [[36mDialect[0;39m]: HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[34mINFO [0;39m [2015-05-17 13:12:52,860] [main] [[36mTransactionFactoryInitiator[0;39m]: HHH000399: Using default transaction strategy (direct JDBC transactions)
+[34mINFO [0;39m [2015-05-17 13:12:52,874] [main] [[36mASTQueryTranslatorFactory[0;39m]: HHH000397: Using ASTQueryTranslatorFactory
+[34mINFO [0;39m [2015-05-17 13:12:53,237] [main] [[36mServerFactory[0;39m]: Starting DeeService
+                           web-scale hello world dP for the web
+                                                 88
+  .d8888b. dP.  .dP .d8888b. 88d8b.d8b. 88d888b. 88 .d8888b.
+  88ooood8  `8bd8'  88'  `88 88'`88'`88 88'  `88 88 88ooood8
+  88.  ...  .d88b.  88.  .88 88  88  88 88.  .88 88 88.  ...
+  `88888P' dP'  `dP `88888P8 dP  dP  dP 88Y888P' dP `88888P'
+                                        88
+                                        dP
+
+[34mINFO [0;39m [2015-05-17 13:12:53,307] [main] [[36mSetUIDListener[0;39m]: Opened application@128f2d36{HTTP/1.1}{0.0.0.0:14041}
+[34mINFO [0;39m [2015-05-17 13:12:53,307] [main] [[36mSetUIDListener[0;39m]: Opened admin@75e13dbe{HTTP/1.1}{0.0.0.0:14042}
+[34mINFO [0;39m [2015-05-17 13:12:53,311] [main] [[36mServer[0;39m]: jetty-9.0.7.v20131107
+[34mINFO [0;39m [2015-05-17 13:12:53,431] [main] [[36mWebApplicationImpl[0;39m]: Initiating Jersey application, version 'Jersey: 1.18.1 02/19/2014 03:28 AM'
+[34mINFO [0;39m [2015-05-17 13:12:53,547] [main] [[36mDropwizardResourceConfig[0;39m]: The following paths were found for the configured resources:
+
+    GET     /staff/get (com.dee.resources.StaffResource)
+    GET     /staff/get/image/{mobile} (com.dee.resources.StaffResource)
+    POST    /staff/save (com.dee.resources.StaffResource)
+    POST    /staff/upload/image (com.dee.resources.StaffResource)
+    GET     /customer/get (com.dee.resources.CustomerResources)
+    GET     /customer/get/image/{mobile} (com.dee.resources.CustomerResources)
+    POST    /customer/save (com.dee.resources.CustomerResources)
+    POST    /customer/upload/image (com.dee.resources.CustomerResources)
+    POST    /order/create (com.dee.resources.OrderResource)
+    POST    /order/payment/add/{id} (com.dee.resources.OrderResource)
+
+[34mINFO [0;39m [2015-05-17 13:12:53,956] [main] [[36mGuiceComponentProviderFactory[0;39m]: Binding com.dee.resources.StaffResource to GuiceInstantiatedComponentProvider
+[34mINFO [0;39m [2015-05-17 13:12:53,973] [main] [[36mGuiceComponentProviderFactory[0;39m]: Binding com.dee.resources.CustomerResources to GuiceInstantiatedComponentProvider
+[34mINFO [0;39m [2015-05-17 13:12:53,991] [main] [[36mGuiceComponentProviderFactory[0;39m]: Binding com.dee.resources.OrderResource to GuiceInstantiatedComponentProvider
+[34mINFO [0;39m [2015-05-17 13:12:53,997] [main] [[36mContextHandler[0;39m]: Started i.d.j.MutableServletContextHandler@48fb5b8a{/,null,AVAILABLE}
+[34mINFO [0;39m [2015-05-17 13:12:53,999] [main] [[36mAdminEnvironment[0;39m]: tasks = 
+
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+[34mINFO [0;39m [2015-05-17 13:12:54,006] [main] [[36mContextHandler[0;39m]: Started i.d.j.MutableServletContextHandler@707730b7{/,null,AVAILABLE}
+[34mINFO [0;39m [2015-05-17 13:12:54,013] [main] [[36mServerConnector[0;39m]: Started application@128f2d36{HTTP/1.1}{0.0.0.0:14041}
+[34mINFO [0;39m [2015-05-17 13:12:54,016] [main] [[36mServerConnector[0;39m]: Started admin@75e13dbe{HTTP/1.1}{0.0.0.0:14042}
+[34mINFO [0;39m [2015-05-17 13:13:39,332] [dw-24 - POST /staff/save] [[36mStatisticalLoggingSessionEventListener[0;39m]: Session Metrics {
+    52000 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    16377000 nanoseconds spent preparing 2 JDBC statements;
+    5125000 nanoseconds spent executing 2 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    5840000 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    52000 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+[34mINFO [0;39m [2015-05-17 13:16:58,341] [dw-24 - GET /customer/get?name=akash&mobile=&phone=] [[36mStatisticalLoggingSessionEventListener[0;39m]: Session Metrics {
+    54000 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1444000 nanoseconds spent preparing 1 JDBC statements;
+    9171000 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    670000 nanoseconds spent executing 1 flushes (flushing a total of 13 entities and 0 collections);
+    20000 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+[34mINFO [0;39m [2015-05-17 13:17:02,090] [dw-25 - GET /customer/get?name=akash&mobile=8971150421&phone=8242496322] [[36mStatisticalLoggingSessionEventListener[0;39m]: Session Metrics {
+    53000 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1376000 nanoseconds spent preparing 1 JDBC statements;
+    685000 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    12000 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+[34mINFO [0;39m [2015-05-17 13:17:05,839] [dw-24 - GET /customer/get?name=akash&mobile=89&phone=8242496322] [[36mStatisticalLoggingSessionEventListener[0;39m]: Session Metrics {
+    43000 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    363000 nanoseconds spent preparing 1 JDBC statements;
+    547000 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    14000 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+[34mINFO [0;39m [2015-05-17 13:17:05,863] [dw-25 - GET /customer/get?name=akash&mobile=89&phone=824] [[36mStatisticalLoggingSessionEventListener[0;39m]: Session Metrics {
+    46000 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    186000 nanoseconds spent preparing 1 JDBC statements;
+    509000 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    9000 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+[34mINFO [0;39m [2015-05-17 13:17:05,878] [dw-24 - GET /customer/get?name=&mobile=&phone=824] [[36mStatisticalLoggingSessionEventListener[0;39m]: Session Metrics {
+    46000 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    194000 nanoseconds spent preparing 1 JDBC statements;
+    488000 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    9000 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+[34mINFO [0;39m [2015-05-17 13:17:05,899] [dw-25 - GET /customer/get?name=&mobile=89&phone=] [[36mStatisticalLoggingSessionEventListener[0;39m]: Session Metrics {
+    56000 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    436000 nanoseconds spent preparing 1 JDBC statements;
+    514000 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    12000 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+[34mINFO [0;39m [2015-05-17 13:17:05,917] [dw-24 - GET /customer/get?name=&mobile=&phone=] [[36mStatisticalLoggingSessionEventListener[0;39m]: Session Metrics {
+    51000 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    196000 nanoseconds spent preparing 1 JDBC statements;
+    643000 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    676000 nanoseconds spent executing 1 flushes (flushing a total of 13 entities and 0 collections);
+    9000 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+[34mINFO [0;39m [2015-05-17 13:17:23,568] [dw-24 - GET /customer/get?name=akash&mobile=8971150421&phone=8242496322] [[36mStatisticalLoggingSessionEventListener[0;39m]: Session Metrics {
+    55000 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    272000 nanoseconds spent preparing 1 JDBC statements;
+    648000 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    13000 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+[34mINFO [0;39m [2015-05-17 13:17:52,958] [dw-24 - GET /customer/get?name=akash&mobile=8971150421&phone=8242496322] [[36mStatisticalLoggingSessionEventListener[0;39m]: Session Metrics {
+    53000 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    266000 nanoseconds spent preparing 1 JDBC statements;
+    580000 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    13000 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+[34mINFO [0;39m [2015-05-17 13:17:53,567] [dw-25 - GET /customer/get?name=akash&mobile=89&phone=8242496322] [[36mStatisticalLoggingSessionEventListener[0;39m]: Session Metrics {
+    56000 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    268000 nanoseconds spent preparing 1 JDBC statements;
+    700000 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    12000 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+[34mINFO [0;39m [2015-05-17 13:17:53,585] [dw-24 - GET /customer/get?name=akash&mobile=89&phone=824] [[36mStatisticalLoggingSessionEventListener[0;39m]: Session Metrics {
+    56000 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    267000 nanoseconds spent preparing 1 JDBC statements;
+    672000 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    13000 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+[34mINFO [0;39m [2015-05-17 13:17:53,601] [dw-25 - GET /customer/get?name=&mobile=&phone=824] [[36mStatisticalLoggingSessionEventListener[0;39m]: Session Metrics {
+    56000 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    272000 nanoseconds spent preparing 1 JDBC statements;
+    698000 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    13000 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+[34mINFO [0;39m [2015-05-17 13:17:53,615] [dw-24 - GET /customer/get?name=&mobile=89&phone=] [[36mStatisticalLoggingSessionEventListener[0;39m]: Session Metrics {
+    56000 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    279000 nanoseconds spent preparing 1 JDBC statements;
+    733000 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    13000 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+[34mINFO [0;39m [2015-05-17 13:18:09,443] [dw-24 - GET /customer/get?name=&mobile=&phone=824] [[36mStatisticalLoggingSessionEventListener[0;39m]: Session Metrics {
+    588000 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    561000 nanoseconds spent preparing 1 JDBC statements;
+    486000 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    10000 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+[34mINFO [0;39m [2015-05-17 13:18:48,140] [dw-24 - GET /customer/get?name=&mobile=&phone=824] [[36mStatisticalLoggingSessionEventListener[0;39m]: Session Metrics {
+    63000 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    548000 nanoseconds spent preparing 1 JDBC statements;
+    506000 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    9000 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
